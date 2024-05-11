@@ -19,6 +19,12 @@ export default function Home() {
       role: "Developer Experience at Vercel",
       description: "What I'm learning about shipping great products, becoming a better developer, and growing a career in tech.",
       image: "/delba.jpg"
+    },
+    {
+      name: "Lydia Hallie",
+      role: "Staff Developer Advocate, Vercel",
+      description: "Lydia Hallie is a Staff Developer Advocate who primarily works with JavaScript, React, Node, GraphQL, and serverless technologies. She also spends her time mentoring and doing in-person training sessions.",
+      image: "/lydia.jpg"
     }
   ]
 
@@ -26,18 +32,17 @@ export default function Home() {
     <div>
       <header className="text-6xl text-center">Hello GHW</header>
       <h1 className="text-xl text-center">WELCOME TO MY DASHBOARD</h1>
-
-      {speakerInformation.
-        map((speaker) =>
-          <Card
-            name={speaker.name}
-            role={speaker.role}
-            description={speaker.description}
-            image={speaker.image}
-          />
-        )}
-
-
+      <div className="flex flex-row justify-center items-center gap-4 flex-wrap">
+        {speakerInformation.
+          map((speaker) =>
+            <Card
+              name={speaker.name}
+              role={speaker.role}
+              description={speaker.description}
+              image={speaker.image}
+            />
+          )}
+      </div>
     </div>
   );
 }
